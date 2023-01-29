@@ -8,8 +8,8 @@ var final = document.querySelector('.final');
 
 
 function btnCriptografar() {
-    container.style.display='none';
-    final.style.display='block';
+	container.style.display = 'none';
+	final.style.display = 'block';
 	textoSaida.value = criptografar(textoEntrada.value);
 	textoEntrada.value = '';
 }
@@ -27,9 +27,9 @@ function btnCriptografar() {
 function criptografar(textoAuxiliar) {
 	let matrizChave = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 	// textoAuxiliar = textoAuxiliar.toLowerCase();
-	for(let i=0; i < matrizChave.length; i++) {
-		if(textoAuxiliar.includes(matrizChave[i][0])) {
-			textoAuxiliar=textoAuxiliar.replaceAll(matrizChave[i][0],matrizChave[i][1])
+	for (let i = 0; i < matrizChave.length; i++) {
+		if (textoAuxiliar.includes(matrizChave[i][0])) {
+			textoAuxiliar = textoAuxiliar.replaceAll(matrizChave[i][0], matrizChave[i][1])
 		}
 	}
 	return textoAuxiliar;
@@ -37,9 +37,9 @@ function criptografar(textoAuxiliar) {
 
 
 function btnDescriptografar() {
-    container.style.display='none';
-    final.style.display='block';
-    textoSaida.value = descriptografar(textoEntrada.value);
+	container.style.display = 'none';
+	final.style.display = 'block';
+	textoSaida.value = descriptografar(textoEntrada.value);
 	textoEntrada.value = "";
 }
 
@@ -47,18 +47,18 @@ function descriptografar(textoAuxiliar) {
 	let matrizChave = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
 	// textoAuxiliar = textoAuxiliar.toLowerCase();
 
-	for(let i=0; i < matrizChave.length; i++) {
-		if(textoAuxiliar.includes(matrizChave[i][1])) {
-			textoAuxiliar=textoAuxiliar.replaceAll(matrizChave[i][1],matrizChave[i][0])
+	for (let i = 0; i < matrizChave.length; i++) {
+		if (textoAuxiliar.includes(matrizChave[i][1])) {
+			textoAuxiliar = textoAuxiliar.replaceAll(matrizChave[i][1], matrizChave[i][0])
 		}
 	}
 	return textoAuxiliar;
 }
 
 function btnCopiar() {
-	final.style.display='none';
-    container.style.display="block";
-    textoEntrada.value = textoSaida.value;
+	final.style.display = 'none';
+	container.style.display = "block";
+	textoEntrada.value = textoSaida.value;
 	textoSaida.value = "";
 }
 
